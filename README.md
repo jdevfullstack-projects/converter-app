@@ -14,7 +14,7 @@ This is just the starting point.
 
 The good thing about the background of the main frame, I did not get it
 directly from an image file, but rather from the 
-converted base64 encoding scheme,
+converted Base64,
 just to show that everything that can be expressed in
 bytes can also be easily managed and manipulated in computer programming.
 
