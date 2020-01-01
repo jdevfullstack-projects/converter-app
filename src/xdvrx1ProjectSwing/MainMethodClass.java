@@ -1,19 +1,16 @@
 package xdvrx1ProjectSwing;
 
 /** 
- * Emphasis on using the JPanel
- * is done here.
- * It is very important
- * you hava a good command of using the 
- * JPanel at multiple times
- * to group your components on the frame
- * as it will organize things inside.
- */
+* Java Swing is a great GUI framework of Java.
+* This is the lighweight version of AWT.
+* JavaFX, on the other hand, is the most
+* recent GUI framework particularly for
+* mobile apps.
+*/
 
 //importing the three packages
 //so that there will be no error in compiling
 //javax.swing is widely used today than java.awt
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -34,13 +31,13 @@ public class MainMethodClass
       //a DefaultListModel is needed to hold the 
       //items that will be displayed on JList
       //the type is String      
-      DefaultListModel<String> items = new DefaultListModel<String>( );      
+      DefaultListModel<String> items = new DefaultListModel<String>();      
       
       //setting the fonts 
-      Font f = new Font("Consolas",Font.PLAIN, 24 );   
-      Font f2 = new Font("Comic Sans MS",Font.ITALIC, 24 );   
+      Font f = new Font("Consolas",Font.PLAIN, 24);   
+      Font f2 = new Font("Comic Sans MS",Font.ITALIC, 24);   
       
-      //a List View component creation through JList with the items      
+      //a List View component creation through JList with the items,      
       //the type is String also, so not to issue a warning
       //from the compiler
       JList<String> returnResultJL= new JList<String>(items);
@@ -54,7 +51,7 @@ public class MainMethodClass
       JFrame frame = new JFrame("Converter");
       frame.setIconImage(bg);     
       
-      //a command to simlpy close the frame
+      //a command to simply close the frame
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);          
       
       //creation of a JLabel to hold some string message
@@ -65,7 +62,6 @@ public class MainMethodClass
       //JTextField named 'cm' was called here
       //it belongs to the same class, under the same
       //constructor, so the object can be called
-      //
       //and 'cm' was set to the font f   
       JTextField cm = new JTextField();             
       cm.setFont(f);          
@@ -91,7 +87,7 @@ public class MainMethodClass
       textPanel.add(b);    
       
       //a creation of a JScrollPane
-      //so that if the items are out of the
+      //so that if the items are out of 
       //range, it can still be seen
       JScrollPane scroll = new JScrollPane(returnResultJL);
       scroll.setPreferredSize (new Dimension( 700, 110 ));
@@ -101,8 +97,7 @@ public class MainMethodClass
       convertPanel.add(scroll);
       convertPanel.setOpaque(false);
       
-      //another JButton for reset function
-      //with the Action Listener also
+      //another JButton for reset function      
       JButton b2 = new JButton("Reset");      
       b2.setFont(f);
       
@@ -110,8 +105,7 @@ public class MainMethodClass
       JPanel resetPanel = new JPanel ();
       resetPanel.add(b2);
       resetPanel.setOpaque(false);   
-      
-      
+            
       //at last the main panel
       JPanel mainPanel = new PanelWithBackgroundImage(bg);
       mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.PAGE_AXIS));      
@@ -132,8 +126,7 @@ public class MainMethodClass
       frame.setVisible(true);
       frame.pack();
       frame.setLocationRelativeTo(null);    
-      
-      
+            
       //in this part is where after an action
       //there will be a corresponding event    
       b.addActionListener(new ActionListener(){  
@@ -165,7 +158,7 @@ public class MainMethodClass
             } else {
                
                try {
-                  //creating a variable that has the type float
+                  //creating a variable that has the type double
                   //it will parse the string data
                   //from 'cm' textfield                  
                   double cmC = Double.parseDouble(cmFormatted);                  
@@ -204,8 +197,8 @@ public class MainMethodClass
                      returnResultJL.setSelectedIndex(0);
                      returnResultJL.ensureIndexIsVisible(0);
                      
-                     //the 'cm' should be set to blank to
-                     //enable to receive inputs again 
+                     //the 'cm' should be set to blank, 
+                     //to enable receiving inputs again 
                      cm.setText("");
                   }
                   
@@ -226,8 +219,7 @@ public class MainMethodClass
             }
          }
       });
-      
-      
+            
       b2.addActionListener(new ActionListener(){  
          public void actionPerformed(ActionEvent e){
             cm.setText("");
