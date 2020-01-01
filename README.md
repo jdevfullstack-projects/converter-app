@@ -69,6 +69,8 @@ If you have questions, please feel free to ask me.
 
 <mongAlvarez@gmail.com>
    
+You can also create a pull request to start the discussion or queries.
+
 ## Compiling
 
 To compile/run, for the complete detail, please refer to my documentation:
