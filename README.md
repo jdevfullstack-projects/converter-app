@@ -21,7 +21,7 @@ bytes can also be easily managed and manipulated in computer programming.
 The package is `xdvrx1ProjectSwing`. For the others who still don't know
 the importance of a package in Java, this is used to manage the namespace
 of your project. Imagine if there is no package, developers would end
-up arguing, say, who should get `MyClass` class. 
+up arguing, say, who should get the name `MyClass`. 
 
 Take note: you must create a new project in your IDE so that
 the directory structure here will be correct, or else, it will
@@ -72,7 +72,7 @@ If you have questions, please feel free to ask me:
 
 <mongAlvarez@gmail.com>
    
-You can also create a pull request to start the discussion or queries.
+You can also create a pull request to start the discussion or query/ies.
 
 ## Compiling
 
