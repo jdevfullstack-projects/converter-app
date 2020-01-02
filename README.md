@@ -24,7 +24,7 @@ of your project. Imagine if there is no package, developers would end
 up arguing, say, who should get the name `MyClass`. 
 
 Take note: you must create a new project in your IDE so that
-the directory structure here will be correct, or else, it will
+the directory structure here will be correct or else it will
 return an error because it cannot find the image data to be loaded. 
  
 For the GUI, I used Swing components. Swing is a lightweight version of AWT
