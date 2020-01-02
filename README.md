@@ -56,12 +56,11 @@ from scratch.
 Polymorphism will enable a programmer to define an interface
 and use that in many situations. For example, in real life, the dog's
 sense of smell manifests polymorphism. It will trigger different behaviors
-that depends on the input, whether the dog senses
-food (salivate) or the presence of a stranger (bark). But there is
-only one medium to accept the input, that is the dog's sense of smell.
+from different inputs but there is
+only one medium to accept those inputs, that is the dog's sense of smell.
 If we represent that in programming, that is the interface. 
-And this can be used for different situations.
-That is, *one interface for several methods*.
+And this can be used for different situations: 
+*one interface for several methods*.
 
 Combining these three main concepts of OOP, it can solve complex problems
 in software development. 
