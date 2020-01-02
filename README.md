@@ -35,7 +35,7 @@ The `MainMethodClass` contains the main method, where objects
 are created. Those extended classes of JPanel and JFrame,
 for example, can still be separated
 to be more organized, but I decided not to. But there
-are already classes separate from the main method like `JTextFieldLimit`
+are already classes separated from the main method like `JTextFieldLimit`
 class.
 
 Remember, in OOP there are three main concepts: 
