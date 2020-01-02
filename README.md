@@ -62,8 +62,8 @@ If we represent that in programming, that is the interface.
 And this can be used for different situations: 
 *one interface for several methods*.
 
-Combining these three main concepts of OOP, it can solve complex problems
-in software development. 
+Combining these three main concepts of OOP, a developer can 
+solve complex problems in software development. 
 
 ## Q&A
 
@@ -82,7 +82,7 @@ To compile/run, for the complete detail, please refer to my documentation:
 
 1. Fork it!
 2. Then, made changes, and create a pull request. 
-I'm much willing to collaborate with you!
+I'm much more willing to collaborate with you!
 
 ## License
 
