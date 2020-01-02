@@ -3,7 +3,7 @@
 ![GUI](resources/sampleGUI_mark5.png)
 
 A complete converter program with Java 
-executable version (jar) for distribution. In the source code,
+executable file (jar) for distribution. In the source code,
 I demonstrated everything, even the unit tests.
 
 For the unit tests, mostly, I just tested for the successful creation
@@ -21,8 +21,7 @@ bytes can also be easily managed and manipulated in computer programming.
 The package is `xdvrx1ProjectSwing`. For the others who still don't know
 the importance of a package in Java, this is used to manage the namespace
 of your project. Imagine if there is no package, developers would end
-up arguing, say, who should get `MyClass` class. Naming methods would
-be so hard also because every name should be unique. 
+up arguing, say, who should get `MyClass` class. 
 
 Take note: you must create a new project in your IDE so that
 the directory structure here will be correct, or else, it will
@@ -33,9 +32,9 @@ and has been used for several years in GUI development. The most recent JavaFX
 is another interesting GUI framework, but is not covered here.
 
 The `MainMethodClass` contains the main method, where objects
-are created. Those instances of JPanel and JFrame,
+are created. Those extended classes of JPanel and JFrame,
 for example, can still be separated
-in other classes to be more organized, but I decided not to. But there
+to be more organized, but I decided not to. But there
 are already classes separate from the main method like `JTextFieldLimit`
 class.
 
@@ -69,7 +68,7 @@ in software development.
 
 ## Q&A
 
-If you have questions, please feel free to ask me. 
+If you have questions, please feel free to ask me: 
 
 <mongAlvarez@gmail.com>
    
@@ -88,4 +87,4 @@ I'm much willing to collaborate with you!
 
 ## License
 
-MIT- The permissive license
+MIT- the permissive license
