@@ -1,12 +1,12 @@
 package xdvrx1ProjectSwing;
 
 /** 
-* Java Swing is a great GUI framework of Java.
-* This is the lighweight version of AWT.
-* JavaFX, on the other hand, is the most
-* recent GUI framework particularly for
-* mobile apps.
-*/
+ * Java Swing is a great GUI framework of Java.
+ * This is the lighweight version of AWT.
+ * JavaFX, on the other hand, is the most
+ * recent GUI framework particularly for
+ * mobile apps.
+ */
 
 //importing the three packages
 //so that there will be no error in compiling
@@ -20,93 +20,115 @@ import java.awt.event.*;
  */
 public class UIClass  
 {  
-   public static void init() 
-      throws Exception {    
+   BufferedImageCustom bufferedImageCustom;
+   Image bg;
+   
+   //a DefaultListModel is needed to hold the 
+   //items that will be displayed on JList
+   //the type is String      
+   DefaultListModel<String> items;
+   
+   Font f;
+   Font f2;
+   
+   //a List View component creation through JList with the items,      
+   //the type is String also, so not to issue a warning
+   //from the compiler   
+   JList<String> returnResultJL;
+   
+   DefaultListCellRenderer renderer;
+   JFrame frame;
+   
+   //creation of a JLabel to hold some string message   
+   JLabel text;
+   
+   //JTextField named 'cm' was called here
+   //it belongs to the same class, under the same
+   //constructor, so the object can be called  
+   JTextField cm;
+   
+   FlowLayout flowLayout;
+   
+   JPanel textPanel; 
+   //a creation of a JButton with a text "Convert"    
+   JButton b;
+   
+   //a creation of a JScrollPane
+   //so that if the items are out of 
+   //range, it can still be seen   
+   JScrollPane scroll;
+   
+   JPanel convertPanel;
+   JButton b2;
+   
+   //another creation of a JPanel to hold the second button 
+   JPanel resetPanel;
+   
+   //at last the main panel
+   JPanel mainPanel;
+   
+   UIClass() throws Exception {
+      bufferedImageCustom = new BufferedImageCustom();
+      bg = bufferedImageCustom.imageReturn();
+      items = new DefaultListModel<String>(); 
+      f = new Font("Consolas",Font.PLAIN, 24);
+      f2 = new Font("Comic Sans MS",Font.ITALIC, 24);
+      returnResultJL= new JList<String>(items);
+      renderer = (DefaultListCellRenderer)returnResultJL.getCellRenderer();
+      frame = new JFrame("Converter");
+      text = new JLabel("");
+      cm = new JTextField();   
+      flowLayout = new FlowLayout();
+      textPanel = new JPanel(flowLayout); 
+      b = new JButton ("Convert");
+      scroll = new JScrollPane(returnResultJL); 
+      convertPanel = new JPanel(flowLayout);      
+      b2 = new JButton("Reset");
+      resetPanel = new JPanel ();      
+      mainPanel = new PanelWithBackgroundImage(bg);
+   }
+   
+   void init()  {    
       
-      //the background image  
-      BufferedImageCustom bufferedImageCustom = new BufferedImageCustom();
-      Image bg = bufferedImageCustom.imageReturn();
+      renderer.setHorizontalAlignment(SwingConstants.CENTER);      
+      returnResultJL.setFont(f2);      
       
-      //a DefaultListModel is needed to hold the 
-      //items that will be displayed on JList
-      //the type is String      
-      DefaultListModel<String> items = new DefaultListModel<String>();      
-      
-      //setting the fonts 
-      Font f = new Font("Consolas",Font.PLAIN, 24);   
-      Font f2 = new Font("Comic Sans MS",Font.ITALIC, 24);   
-      
-      //a List View component creation through JList with the items,      
-      //the type is String also, so not to issue a warning
-      //from the compiler
-      JList<String> returnResultJL= new JList<String>(items);
-      DefaultListCellRenderer renderer = 
-         (DefaultListCellRenderer)returnResultJL.getCellRenderer();
-      
-      renderer.setHorizontalAlignment(SwingConstants.CENTER);
-      
-      returnResultJL.setFont(f2); 
-      
-      JFrame frame = new JFrame("Converter");
       frame.setIconImage(bg);     
       
       //a command to simply close the frame
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);          
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       
-      //creation of a JLabel to hold some string message
-      JLabel text = new JLabel("");
       text.setText("Centimeters:"); 
       text.setFont(f);     
       
-      //JTextField named 'cm' was called here
-      //it belongs to the same class, under the same
-      //constructor, so the object can be called
-      //and 'cm' was set to the font f   
-      JTextField cm = new JTextField();             
       cm.setFont(f);          
       cm.setColumns(10);
       cm.setHorizontalAlignment(JTextField.CENTER);
       cm.setDocument(new JTextFieldLimit(8));
       
-      FlowLayout flowLayout = new FlowLayout();
       int align = flowLayout.CENTER;
       
-      JPanel textPanel = new JPanel(flowLayout);      
       textPanel.setOpaque(false);      
       //after a textPanel was created, text label will be added 
       textPanel.add(text,BorderLayout.PAGE_START );
       //also the 'cm' JTextField was added
       textPanel.add(cm);
       
-      //a creation of a JButton with a text "Convert"     
-      JButton b = new JButton ("Convert");
       //changing the font to the specified font
       b.setFont(f);
       b.setOpaque(false);
       textPanel.add(b);    
       
-      //a creation of a JScrollPane
-      //so that if the items are out of 
-      //range, it can still be seen
-      JScrollPane scroll = new JScrollPane(returnResultJL);
       scroll.setPreferredSize (new Dimension( 700, 110 ));
       
-      //another JPanel to hold the scroll               
-      JPanel convertPanel = new JPanel(flowLayout);
       convertPanel.add(scroll);
       convertPanel.setOpaque(false);
       
-      //another JButton for reset function      
-      JButton b2 = new JButton("Reset");      
       b2.setFont(f);
       
-      //another creation of a JPanel to hold the second button
-      JPanel resetPanel = new JPanel ();
       resetPanel.add(b2);
       resetPanel.setOpaque(false);   
-            
-      //at last the main panel
-      JPanel mainPanel = new PanelWithBackgroundImage(bg);
+      
       mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.PAGE_AXIS));      
       //adding all the panels here in order
       mainPanel.add(Box.createVerticalStrut( 110 ));
@@ -125,7 +147,7 @@ public class UIClass
       frame.setVisible(true);
       frame.pack();
       frame.setLocationRelativeTo(null);    
-            
+      
       //in this part is where after an action
       //there will be a corresponding event    
       b.addActionListener(new ActionListener(){  
@@ -218,7 +240,7 @@ public class UIClass
             }
          }
       });
-            
+      
       b2.addActionListener(new ActionListener(){  
          public void actionPerformed(ActionEvent e){
             cm.setText("");
