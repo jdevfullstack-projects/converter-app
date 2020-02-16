@@ -15,6 +15,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 /**
  * initializing a class that throws Exception
  */
@@ -22,6 +24,7 @@ public class UIClass
 {  
    BufferedImageCustom bufferedImageCustom;
    Image bg;
+   ImageIcon imageIcon;
    
    //a DefaultListModel is needed to hold the 
    //items that will be displayed on JList
@@ -70,6 +73,7 @@ public class UIClass
    UIClass() throws Exception {
       bufferedImageCustom = new BufferedImageCustom();
       bg = bufferedImageCustom.imageReturn();
+      imageIcon = new ImageIcon(bg);
       items = new DefaultListModel<String>(); 
       f = new Font("Consolas",Font.PLAIN, 24);
       f2 = new Font("Comic Sans MS",Font.ITALIC, 24);
@@ -93,7 +97,7 @@ public class UIClass
       renderer.setHorizontalAlignment(SwingConstants.CENTER);      
       returnResultJL.setFont(f2);      
       
-      frame.setIconImage(bg);     
+      frame.setIconImage(imageIcon.getImage());     
       
       //a command to simply close the frame
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
