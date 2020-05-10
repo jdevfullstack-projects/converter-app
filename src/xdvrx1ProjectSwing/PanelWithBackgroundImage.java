@@ -4,12 +4,12 @@ import javax.swing.JPanel;
 import java.awt.*;
 
 /**
-* Drawing an image background for
-* the main frame.
-*/
+ * Drawing an image background for
+ * the main frame.
+ */
 class PanelWithBackgroundImage 
    extends JPanel {    
-   Image bg;      
+   private final Image bg;      
    
    PanelWithBackgroundImage(Image bg) {
       this.bg = bg;
