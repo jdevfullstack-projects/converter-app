@@ -5,7 +5,7 @@ import javax.swing.*;
 import javax.swing.text.*;
 
 /**
- *In order to limit the input
+ * In order to limit the input
  * of the user, we need to set it here.
  */
 class JTextFieldLimit 

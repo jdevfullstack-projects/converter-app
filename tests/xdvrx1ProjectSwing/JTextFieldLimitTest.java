@@ -1,7 +1,6 @@
 package xdvrx1ProjectSwing;
 
 import junit.framework.TestCase;
-import org.junit.*;
 
 /**
  * We just want to test whether
@@ -10,14 +9,19 @@ import org.junit.*;
 public class JTextFieldLimitTest 
    extends TestCase {
    
-   @Test
-   public void testObjectShouldNotBeNull() {      
-      
-      int limit = 8;
-      
-      JTextFieldLimit limitText = new JTextFieldLimit(limit);          
+   JTextFieldLimit limitText;
+   
+   public JTextFieldLimitTest (String name) { super(name); }
+   
+   protected void setUp() throws Exception { 
+      int limit = 8;      
+      limitText = new JTextFieldLimit(limit);
+   }
+   protected void tearDown() throws Exception { super.tearDown(); }
+   
+   public void testObjectNotNull() {      
       
       assertNotNull("Object null.", limitText);  
-            
+      
    }   
 }
