@@ -68,9 +68,8 @@ solve complex problems in software development.
 
 ## Q&A
 
-If you have questions, please feel free to ask me: 
-
-<mongAlvarez@gmail.com>
+If you have questions, please utilize the 
+`Discussions` feature of GitHub.
    
 You can also create a pull request to start the discussion or query/ies.
 
