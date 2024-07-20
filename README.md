@@ -1,7 +1,5 @@
 # Simple Measurement Converter Written in Java
 
-*`updated 21 April 2022`*
-
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fxdvrx1%2Fconverter-app&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=PAGE+VIEWS&edge_flat=false)](https://hits.seeyoufarm.com)
 
 ![GUI](resources/sampleGUI_mark5.png)
@@ -10,6 +8,17 @@ A complete converter program with Java
 executable file (jar) for distribution. In the source code,
 I demonstrated everything, even the unit tests.
 
+## Disclaimer
+Please note that these projects are presented as a showcase of my work during a 
+specific period. They represent a snapshot of my skills and accomplishments 
+at that time. As such, these projects are no longer actively maintained or updated. 
+They are kept public for demonstration purposes and may not reflect my current 
+abilities or the latest best practices in the field. 
+
+However, feel free to learn from these archived projects, 
+preserved as they were during that specific period !
+
+## Project Intro
 For the unit tests, mostly, I just tested for the successful creation
 of these objects so that we are sure of their existence.
 It's up to you when you want to test
@@ -69,23 +78,10 @@ And this can be used for different situations:
 Combining these three main concepts of OOP, a developer can 
 solve complex problems in software development. 
 
-## Q&A
-
-If you have questions, please utilize the 
-`Discussions` feature of GitHub.
-   
-You can also create a pull request to start the discussion or query/ies.
-
 ## Compiling
 
 To compile/run, for the complete detail, please refer to my documentation:
 [MANUAL](https://gist.github.com/xdvrx1/c6e1b7bc41a52f2eb90358a4e6f8589b#file-gist_001-md)
-
-## Contributing
-
-1. Fork it!
-2. Then, made changes, and create a pull request. 
-I'm much more willing to collaborate with you!
 
 ## License
 
