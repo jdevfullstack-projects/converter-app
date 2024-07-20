@@ -79,10 +79,8 @@ Combining these three main concepts of OOP, a developer can
 solve complex problems in software development. 
 
 ## Compiling
-
 To compile/run, for the complete detail, please refer to my documentation:
 [MANUAL](https://gist.github.com/xdvrx1/c6e1b7bc41a52f2eb90358a4e6f8589b#file-gist_001-md)
 
 ## License
-
-MIT- the permissive license
+MIT - the permissive license
